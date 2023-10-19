@@ -1,14 +1,14 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/azurenekowo/ayaka/main/resources/favicon.ico">
 </p>   
-
+  
 # <p align="center">Ayaka</p>   
 <p align="center">A graphical UI implementation for ToaHartor's <a href="https://github.com/ToaHartor/GI-cutscenes/">gi-cutsenes</a> utility.</p>   
-<br>
+
 ## Disclaimer    
 - This was created for educational and demonstrational purpose only.    
 - I **didn't code** the demuxer / decrypter program myself, all I did was creating a front-end interface and code a new procedure to merge the video (see the "Limitations" section). All credits of the demuxing / decrypting process and the `gi-cutscenes` CLI program belongs to the mastermind of **[gh/ToaHartor](https://github.com/ToaHartor)**.    
-- All assets, including the font and the cutscenes files are intellectual property of miHoYo. The icon was taken from [Genshin Impact Wiki](genshin-impact.fandom.com/).  
+- All assets, including the font and the cutscenes files are intellectual property of miHoYo. The icon was taken from [Genshin Impact Wiki](genshin-impact.fandom.com/).   
 
 ## Features
 - Select specific audio track / subtitles languages to be merged into a single video.  
