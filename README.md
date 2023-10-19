@@ -86,8 +86,8 @@ Normally, it contains:
     + `VI`: Vietnamese
 
 ## Limitations
-ToaHartor's `gi-cutscenes` doesn't provide an option to extract subtitles individually. You have to use its `-m` (merge) option and `-nc` (no cleanup), that will merge the video in order to generate the `.ass` files.  
-Then after that, the program will start merging the audio track, the video and the subtitles (if provided) into a `.mp4` file. 
+- ToaHartor's `gi-cutscenes` doesn't provide an option to extract subtitles individually. You have to use its `-m` (merge) option and `-nc` (no cleanup), that will merge the video in order to generate the `.ass` files. Then after that, the program will start merging the audio track, the video and the subtitles (if provided) into a `.mp4` file.
+- The speed depends on your device specs.
 
 ## Roadmap / TODOs
 - [ ] Live console output in the browser
