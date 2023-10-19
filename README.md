@@ -58,7 +58,7 @@ Below is a simple cheatsheet / handbook.
 It's basically an archive that is encrypted and needs to be *decrypted/demuxed* in order to view its content.  
 
 You can find them in `[genshin impact folder]\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64`.   
-You will see there are some cutscenes that have 2 files with the same name, suffixed with `Boy` / `Girl`. It is for <img style="width: 24px; height: 24px" src="https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Aether_Icon.png"> Aether / <img style="width: 24px; height: 24px" src="https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Lumine_Icon.png"> Lumine specifically.
+There are some cutscenes that have 2 files with the same name, suffixed with `Boy` / `Girl`. It is for <img style="width: 24px; height: 24px" src="https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Aether_Icon.png"> Aether / <img style="width: 24px; height: 24px" src="https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Lumine_Icon.png"> Lumine specifically.
 
 Normally, it contains:  
 - `filename.ivf`: The actual video file, without any subtitles or audio track.
