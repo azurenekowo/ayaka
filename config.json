@@ -1,0 +1,9 @@
+{
+    "prerequisites": {
+        "ffmpeg": "path",
+        "gicutscenes": "<path_to_GICutscenes.exe>"
+    },
+    "output": "<output_directory>",
+    "defaultFFMPEGFlags": "-c:v libx264",
+    "optionUSMFilesDir": "<folder_containing_usm_files>"
+}

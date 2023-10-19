@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genshin Cutscenes Extractor</title>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' type='image/x-icon' href='./static/favicon.ico'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./static/intl.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <script>
+        function start() {
+            fetch(`/start`, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'audioTrack': document.getElementById('optLanguageAudio').value,
+                    'subtitles': document.getElementById('optLanguageSubs').value,
+                    'ffmpegArgs': document.getElementById('optionFFMpegFlags').value
+                })
+            }).then(res => (res.ok ? alert('Started demuxing, please check the console for further details...') : alert('An error occured. Please check the console for further details.')))
+        }
+
+        function getFilesList() {
+            fetch(`/getinputfiles`).then(res => res.json()).then(response => {
+                document.getElementById('selectedFilesCount').innerHTML = `— ${response.data} file(s) loaded —`
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class='mainui'>
+        <h3>Genshin Cutscenes Extractor</h3>
+        <p>
+            A graphical UI implementation for <a href="https://github.com/ToaHartor/GI-cutscenes">ToaHartor/GI-cutscenes</a>
+        </p>
+        <div class="step">
+            <br>
+            Directory containing USM file(s):<br>
+            <input type="text" style="width: fit-content;" value="$usminpdir" id="optionUSMFilesDir" disabled>&emsp;<button onclick="getFilesList()"><i class="fa-solid fa-file-import" style="color: aquamarine;"></i> Upload...</i></button> 
+            <p id="selectedFilesCount">— Idle —</p>
+        </div>
+        <div class="step">
+            <br>
+            <b>⚙ Configuration</b>
+            <br>
+            <div style="white-space: pre; text-align: left;;">
+                Language / Audio:&emsp;<select id="optLanguageAudio">
+                    <option value="0">00 - Chinese 🇨🇳</option>
+                    <option selected value="1" >01 - English 🇬🇧</option>
+                    <option value="2">02 - Japanese 🇯🇵</option>
+                    <option value="3">03 - Korean 🇰🇷</option>
+                </select><br>
+                Language / Subtitles:&emsp;<select id="optLanguageSubs">
+                    <option value="CHS">Chinese Simplified 🇨🇳</option>
+                    <option value="CHT">Chinese Traditional 🇨🇳</option>
+                    <option value="DE">German 🇩🇪</option>
+                    <option selected value="EN" >English 🇬🇧</option>
+                    <option value="ES">Spanish 🇪🇸</option>
+                    <option value="FR">French 🇫🇷</option>
+                    <option value="ID">Indonesian 🇮🇩</option>
+                    <option value="IT">Italian 🇮🇹</option>
+                    <option value="JP">Japanese 🇯🇵</option>
+                    <option value="KR">Korean 🇰🇷</option>
+                    <option value="PT">Portuguese 🇵🇹</option>
+                    <option value="RU">Russian 🇷🇺</option>
+                    <option value="TH">Thai 🇹🇭</option>
+                    <option value="TR">Turkish 🇹🇷</option>
+                    <option value="VI">Vietnamese 🇻🇳</option>
+                </select><br>
+                Output folder&emsp;<input type="text" style="width: fit-content;" value="$outdir" disabled><br>
+                FFMPEG args&emsp;<input type="text" style="width: fit-content;" value="$ffmpegflags" id="optionFFMpegFlags">
+            </div>
+            <br>
+        </div>
+        <button onclick="start()">— Start —</button>
+    </div>
+</body>
+</html>
