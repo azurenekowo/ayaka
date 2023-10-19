@@ -1,35 +1,31 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/azurenekowo/ayaka/main/resources/favicon.ico">
-</p>
+    <img src="https://raw.githubusercontent.com/azurenekowo/ayaka/main/resources/favicon.ico">
+</p>   
 
-# <p style="text-align: center">Ayaka</o>
-A graphical UI implementation for ToaHartor's [gi-cutsenes](https://github.com/ToaHartor/GI-cutscenes/) utility.
+# <p align="center">Ayaka</p>   
+<p align="center">A graphical UI implementation for ToaHartor's <a href="https://github.com/ToaHartor/GI-cutscenes/">gi-cutsenes</a> utility.</p>   
 <br>
-<br>
-<br>
-## Disclaimer
-- This was created for educational and demonstrational purpose only.   
-- I **didn't code** the demuxer / decrypter program myself, all I did was creating a front-end interface and code a new procedure to merge the video (see the "Limitations" section). All credits of the demuxing / decrypting process and the `gi-cutscenes` CLI program belongs to the mastermind of **[gh/ToaHartor](https://github.com/ToaHartor)**.  
-- All assets, including the font and the cutscenes files are intellectual property of miHoYo. The icon was taken from [Genshin Impact Wiki](genshin-impact.fandom.com/).
+## Disclaimer    
+- This was created for educational and demonstrational purpose only.    
+- I **didn't code** the demuxer / decrypter program myself, all I did was creating a front-end interface and code a new procedure to merge the video (see the "Limitations" section). All credits of the demuxing / decrypting process and the `gi-cutscenes` CLI program belongs to the mastermind of **[gh/ToaHartor](https://github.com/ToaHartor)**.    
+- All assets, including the font and the cutscenes files are intellectual property of miHoYo. The icon was taken from [Genshin Impact Wiki](genshin-impact.fandom.com/).  
 
 ## Features
-- Select specific audio track / subtitles languages to be merged into a single video.
-- Provide an easy and intuitive interface to interact with `gi-cutscenes`  
+- Select specific audio track / subtitles languages to be merged into a single video.  
+- Provide an easy and intuitive interface to interact with `gi-cutscenes`   
 
 ## How to run?
 - *Prerequisites:*
     + [node.js](https://nodejs.org/en/download)
     + [gi-cutsenes](https://github.com/ToaHartor/GI-cutscenes/)
     + [FFmpeg](https://ffmpeg.org/download.html)  
-<br>
-<br>
-- Clone this repository (or grab a download from [the latest release](https://github.com/azurenekowo/ayaka/releases/latest))  
-- Open `config.json` and modify it to your own environment.
-- After everything is ready, copy the USM file(s) into the input directory and run `node server.js`
-- Access http://localhost:2809/ on your browser. If you had modified the port settings, then change it accordingly.
+- Clone this repository (or grab a download from [the latest release](https://github.com/azurenekowo/ayaka/releases/latest  ))   
+- Open `config.json` and modify it to your own environment.  
+- After everything is ready, copy the USM file(s) into the input directory and run `node server.js`  
+- Access http://localhost:2809/ on your browser. If you had modified the port settings, then change it accordingly.  
 
 ## Configuration file
-`config.json` can be found at the root folder.  
+`config.json` can be found at the root folder.   
 Below is a simple cheatsheet / handbook.
 ```json
 {
