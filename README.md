@@ -13,6 +13,14 @@
 ## Features
 - Select specific audio track / subtitles languages to be merged into a single video.  
 - Provide an easy and intuitive interface to interact with `gi-cutscenes`   
+- Screenshots:
+<details>
+  <summary>Expand...</summary>
+  <div style="display: flex; flex-direction: row">
+      <img src="https://github.com/azurenekowo/ayaka/assets/67498765/f0db13c3-90be-49fc-aa54-46679be6a1d6.png" style="width: 50%; height: 50%">
+      <img src="https://github.com/azurenekowo/ayaka/assets/67498765/abcd9971-130e-4765-9203-bec019ecdbd9" style="width: 50%; height: 50%">
+  </div>
+</details>
 
 ## How to run?
 - *Prerequisites:*
