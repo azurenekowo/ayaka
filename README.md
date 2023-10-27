@@ -89,7 +89,8 @@ Normally, it contains:
 
 ## Limitations
 - ToaHartor's `gi-cutscenes` doesn't provide an option to extract subtitles individually. You have to use its `-m` (merge) option and `-nc` (no cleanup), that will merge the video in order to generate the `.ass` files. Then after that, the program will start merging the audio track, the video and the subtitles (if provided) into a `.mp4` file.
-- The speed depends on your device specs.
+- The speed depends on your device specs. *could be somewhat improved with tweaking the `-preset` flag - [doc](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset)*
+- For now, Windows only. 
 
 ## Roadmap / TODOs
 - [ ] Live console output in the browser
