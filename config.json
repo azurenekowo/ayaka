@@ -1,9 +1,0 @@
-{
-    "prerequisites": {
-        "ffmpeg": "path",
-        "gicutscenes": "D:\\GICutscenes-0.5.0-win-x64-standalone\\GICutscenes.exe"
-    },
-    "output": "D:\\Ayaka\\output",
-    "defaultFFMPEGFlags": "-c:v libx264",
-    "optionUSMFilesDir": "D:\\Ayaka\\input"
-}
