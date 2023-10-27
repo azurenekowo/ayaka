@@ -42,7 +42,7 @@ Below is a simple cheatsheet / handbook.
         "gicutscenes": "<path_to_GICutscenes.exe>"
     },
     "output": "<output_directory>",
-    "defaultFFMPEGFlags": "-c:v libx264",
+    "defaultFFMPEGFlags": "-preset superfast",
     "optionUSMFilesDir": "<folder_containing_usm_files>"
 }
 ```
