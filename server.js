@@ -84,8 +84,14 @@ async function demuxIndividualFile(file, indexCounter) {
     const cutsceneName = file.replace('.usm', '')
 
     exec(`cd ${config.prerequisites.gicutscenes.replace('\\GICutscenes.exe', '')};${config.prerequisites.gicutscenes} demuxUsm "${path.join(config.optionUSMFilesDir, file)}" -s -m -nc -o "${config.output}"`, { shell: 'powershell.exe' }, async function (stdout, stderr, error) {
+        if(error && error != '') {
+            console.log('[' + chalk.redBright('Demuxer') + '] Failed to extract ' + chalk.grey(file) + '\n          ' + chalk.grey(error))
+            const id = indexCounter + 1
+            return await _callbackDemuxer(id, filesToDemux)
+        }
+
         // fs.existsSync(path.join(config.output, '/Subs')) ? fs.readdirSync(path.join(config.output, '/Subs')).filter(f => f.endsWith('.ass')) : null
-        const hasSubtitles = fs.existsSync(path.join(config.output, '/Subs')) ? true : false
+        const hasSubtitles = fs.existsSync(path.join(config.output, `/Subs/${cutsceneName}_EN.ass`)) ? true : false
         fs.readdirSync(config.output).filter(f => f.endsWith('.hca') || f.endsWith('.mkv')).forEach(async f => { 
             fs.unlinkSync(path.join(config.output, f))            
         })

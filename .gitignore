@@ -1,1 +1,4 @@
 node_modules/
+input/
+output/
+config.json
