@@ -25,11 +25,13 @@
 ## How to run?
 - *Prerequisites:*
     + [node.js](https://nodejs.org/en/download)
-    + [gi-cutsenes](https://github.com/ToaHartor/GI-cutscenes/)
-    + [FFmpeg](https://ffmpeg.org/download.html)  
-- Clone this repository (or grab a download from [the latest release](https://github.com/azurenekowo/ayaka/releases/latest  ))   
-- Open `config.json` and modify it to your own environment.  
-- After everything is ready, copy the USM file(s) into the input directory and run `node server.js`  
+    + [gi-cutsenes](https://github.com/ToaHartor/GI-cutscenes/), *and [genshin-data repository](https://gitlab.com/Dimbreath/AnimeGameData)*
+    + [FFmpeg](https://ffmpeg.org/download.html)
+      
+- Clone this repository:  
+`git clone https://github.com/azurenekowo/ayaka.git`, or [download the latest release](https://github.com/azurenekowo/ayaka/releases/latest).  
+- Rename `config.json.TEMPLATE` to `config.json`, open it and modify it to your own likings.  
+- After everything is ready, copy the USM file(s) into your input directory and run `node server.js`  
 - Access http://localhost:2809/ on your browser. If you had modified the port settings, then change it accordingly.  
 
 ## Configuration file
